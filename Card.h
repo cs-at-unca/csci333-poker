@@ -8,8 +8,9 @@ class Card {
  private:
   int rank;  /* a number between 2 and 14 */
   int suit;  /* a number between 1 and 4 */
-  static std::vector<std::string> rankNames;
-  //static std::vector<std::string> suitNames;
+  const static std::string suitNames[4];
+  const static std::string rankNames[13];
+
   
  public:
   Card(int r, int s); //constructor

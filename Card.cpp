@@ -2,6 +2,24 @@
 #include <iostream>
 #include <assert.h>
 
+const std::string Card::suitNames[4] = {std::string("Clubs")
+				  , std::string("Diamonds")
+				  , std::string("Hearts")
+				  , std::string("Spades")};
+
+const std::string Card::rankNames[13] = {std::string("Two")
+					 , std::string("Three")
+					 , std::string("Four")
+					 , std::string("Five")
+					 , std::string("Six")
+					 , std::string("Seven")
+					 , std::string("Eight")
+					 , std::string("Nine")
+					 , std::string("Ten")
+					 , std::string("Jack")
+					 , std::string("Queen")
+					 , std::string("King")
+					 , std::string("Ace") };
 
 
 Card::Card(int r, int s) {
@@ -31,5 +49,5 @@ void Card::setRank(int r) {
 }
 
 void Card::print() {
-  std::cout << rank << " of " << suit << std::endl;
+  std::cout << rankNames[rank-2] << " of " << suitNames[suit-1] << std::endl;
 }
