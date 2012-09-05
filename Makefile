@@ -9,3 +9,8 @@ Card.o: Card.h Card.cpp
 
 Deck.o: Deck.h Deck.cpp Card.o
 	$(CC) $(CFLAGS) -c Deck.cpp
+
+clean: 
+	rm -f *~
+	rm -f *.o
+	rm -f test
