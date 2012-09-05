@@ -14,6 +14,7 @@ class Deck {
   Deck();
   Card* deal();
   void shuffle();
+  void print();
 };
 
 #endif
