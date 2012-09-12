@@ -25,12 +25,11 @@ void Deck::shuffle() {
     // Use size instead of iterators, for ease of Fisher-Yates shuffle
     // algorithm.
     int i;
-    Card temp(2,1);
 
     for (i = deck.size()-1; i >= 0; --i) {
         int r = rand() % (i+1); // random number between 0 and i inclusive
 
-        temp = deck[i];
+        Card temp = deck[i];
         deck[i] = deck[r];
         deck[r] = temp;
     }
