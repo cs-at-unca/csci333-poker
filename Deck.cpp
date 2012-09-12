@@ -20,8 +20,19 @@ Card* Deck::deal() {
   return result;
 }
 
+// Use Fisher-Yates shuffle
 void Deck::shuffle() {
+    // Use size instead of iterators, for ease of Fisher-Yates shuffle
+    // algorithm.
+    int i;
 
+    for (i = deck.size()-1; i >= 0; --i) {
+        int r = rand() % (i+1); // random number between 0 and i inclusive
+
+        Card temp = deck[i];
+        deck[i] = deck[r];
+        deck[r] = temp;
+    }
 }
 
 void Deck::print() {
